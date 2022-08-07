@@ -1,0 +1,22 @@
+/*1 + r + r^2 + ... + r^n */
+#include<stdio.h>
+#include<math.h>
+int sum(int a,int b);
+void main(){
+    int r,n,a;
+    printf("enter number for r: ");
+    scanf("%d",&r);
+    printf("enter number for n: ");
+    scanf("%d",&n);
+    a=sum(r,n);
+    printf("\nthe sum of series:%d",a);
+
+}
+int sum(int a,int b){
+    if(b==0)
+        return 1;
+    else
+        return pow(a,b)+sum(a,b-1);
+
+}
+
