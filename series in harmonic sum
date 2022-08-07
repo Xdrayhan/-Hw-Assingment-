@@ -1,0 +1,26 @@
+/*1/1! + 2/2! + 3/3! + ......1/N! */ 
+
+
+#include<stdio.h>
+double har_sum(int n){
+    if(n==0)
+        return 0;
+    else
+        return (float)n/fac(n)+ har_sum(n-1);
+
+}
+int fac(int n){
+    if(n==0)
+        return 1;
+    else
+        return n*fac(n-1);
+
+}
+void main(){
+    float a,x;
+
+    printf("enter any number: ");
+    scanf("%f",&x);
+    a=har_sum(x);
+    printf("%.2f",a);
+}
