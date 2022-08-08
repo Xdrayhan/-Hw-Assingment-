@@ -1,0 +1,32 @@
+ /*e^x = 1 + x + x^2 / 2! + x^3 / 3!*/
+
+#include<stdio.h>
+#include<math.h>
+double e(int x,int n);
+int fac(int n);
+ void main(){
+    float x,n;
+    printf("enter x: ");
+    scanf("%f",&x);
+    printf("enter n: ");
+    scanf("%f",&n);
+    float a =e(x,n);
+    printf("sum of e to the power x:%.2f",a);
+
+}
+
+ int fac(int n){
+ if(n==0)
+    return 1;
+ else
+    return n*fac(n-1);
+}
+
+double e(int x,int n){
+    if(n==0)
+        return 1;
+    else
+        return (float) (pow(x,n)/fac(n)) +e(x,n-1);
+
+
+}
