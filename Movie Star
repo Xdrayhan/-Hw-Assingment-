@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+
+struct Moviestar{
+    char name[20];
+    float rating;
+    int totalFan;
+
+};
+
+ void main(){
+     struct Moviestar z[5];
+  for(int i=0;i<5;i++){
+    printf("%d Name of the movie star:\n",i+1);
+    gets(z[i].name);
+    //scanf("%s",z[i].name);
+    fflush(stdin);
+    printf("How many user:\n");
+    scanf("%d",&z[i].totalFan);
+    fflush(stdin);
+    for(int j=1;j<=z[i].totalFan;j++){
+        float rate;
+        printf("Give rating out of 5:");
+        scanf("%f",&rate);
+        fflush(stdin);
+        z[i].rating+=rate;
+        }
+    z[i].rating/=z[i].totalFan;
+
+}
+  for(int i=0;i<5;i++){
+    printf("Movie star name is: %s\n",z[i].name);
+    printf("Rating is: %f\n",z[i].rating);
+    printf("Total fan: %d\n",z[i].totalFan);
+}
+
+}
+
