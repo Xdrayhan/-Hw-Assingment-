@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+void main()
+{
+    float a,n;
+    int x,y;
+    float d1,d2;
+    printf("enter a number: ");
+    scanf("%f",&n);
+    a=sqrt(n);
+    printf("The root of %.2f is :%.2f\n",n,a);
+    x=floor(a);
+    //printf("\nThe floor value of n:%d",x);
+    y=ceil(a);
+    //printf("\nThe ceil value of n:%d",y);
+    d1=(float) (a-x);
+    //printf("\nthe value of d1:%.2f",d1);
+    d2=(float) (y-a);
+    //printf("\nthe value of d2:%.2f",d2);
+    if(d1<d2)
+    {
+        printf("The closest Integer of %.2f is: %d\n",a,x);
+    }
+    else
+        printf("The closest Integer of %.2f is: %d\n",a,y);
+
+
+
+}
+
+
