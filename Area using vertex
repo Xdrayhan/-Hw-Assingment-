@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+void main(){
+    float x1=4,x2=0,x3=-1,y1=5,y2=7,y3=1;
+    float A,a,a1,b,b1,c,c1,d;
+//    printf("enter x1,y1: ");
+//    scanf("%f%f",&x1,&y1);
+//     printf("enter x2,y2: ");
+//    scanf("%f%f",&x2,&y2);
+//     printf("enter x13,y3: ");
+//    scanf("%f%f",&x3,&y3);
+    a=y2-y3;
+    printf("\n%.2f",a);
+    a1=x1*a;
+    printf("\n%f",a1);
+    b=y3-y1;
+    printf("\n%f",b);
+    b1=x2*b;
+    printf("\n%f",b1);
+    c=y1-y2;
+    printf("\n%f",c);
+    c1=x3*c;
+    printf("\n%f",c1);
+
+    A =(float) (0.5)*(a1+b1+c1);
+    printf("\nthe area is:%.2f\n",A);
+
+
+}
+
+
+
