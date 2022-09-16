@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+void main()
+{
+    int min,max,n,r,rev,i;
+    printf("enter min and mix: ");
+    scanf("%d%d",&min,&max);
+    for( i=min;i<=max;i++){
+        n=i;
+        rev=0;
+        while(n!=0){
+            r=n%10;
+            rev=rev*10+r;
+            n=n/10;
+        }
+        if(i==rev){
+            printf("%5d ",i);
+        }
+    }
+
+}
