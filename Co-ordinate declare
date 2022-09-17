@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main(){
+    int a,b;
+    printf("enter two co-ordinate:");
+    scanf("%d%d",&a,&b);
+    if(a>0 && b>0){
+        printf("%d and %d are in first co-ordinate",a,b);
+    }
+    else if(a<0 && b>0){
+        printf("%d and %d are in second co-ordinate",a,b);
+    }
+    else if(a<0 && b<0){
+        printf("%d and %d are in third co-ordinate",a,b);
+    }
+    else if(a>0 && b<0){
+        printf("%d and %d are in fourth co-ordinate",a,b);
+    }
+}
