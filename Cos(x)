@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int n=3,i;
+    float angle_degree,angle_radian,temp,ans;
+    printf("enter the angle in degree: \n");
+    scanf("%f",&angle_degree);
+    printf("\nenter how many terms: ");
+    scanf("%d",&n);
+    angle_radian=angle_degree*3.14/180;
+    ans=1;
+    temp=1;
+    for(i=1; i<=2*n; i+=2)
+    {
+        temp=temp*(-1)*angle_radian*angle_radian/(i*(i+1));
+        ans=ans+temp;
+    }
+    printf("Cos(%f) is %.2f",angle_degree,ans);
+}
+
+
+
+
