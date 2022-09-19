@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void main()
+{
+    int n,k,i,ans=1;
+    char c;
+    char str[20];
+    printf("enter a number: \n");
+    scanf("%d",&n);
+    fflush(stdin);
+    printf("enter ! sign: \n");
+    gets(str);
+    fflush(stdin);
+    k=strlen(str);
+    for(i=n; i>=1; i=i-k)
+    {
+        ans=ans*i;
+    }
+    printf("\nthe ans is:%d",ans);
+
+
+}
+
+
+
+
